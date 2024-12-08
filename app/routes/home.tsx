@@ -1,5 +1,6 @@
 import type { Route } from "./+types/home";
 import { Welcome } from "../welcome/welcome";
+import { Button } from "@nextui-org/react";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -9,5 +10,10 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <div className="flex flex-col space-y-4 items-center">
+      <Welcome />
+      <Button color="primary">Button</Button>
+    </div>
+  );
 }
